@@ -4,7 +4,7 @@ This is a plain-and-simple docker image that allows you to cross-compile Rust ap
 
 ## How to use
 
-This image is based off of `rust:1.64` directly. So you can use the image the same way you would rust the official rust image.
+This image is based off of `rust:1.65` directly. So you can use the image the same way you would rust the official rust image.
 
 Just do:
 
