@@ -1,9 +1,10 @@
-FROM rust:1.64
+FROM rust:1.65
 
 WORKDIR /opt/osxcross
 RUN apt update && apt dist-upgrade -y
-RUN apt install -y wget git clang cmake libssl-dev libz-dev
+RUN apt install -y wget git clang cmake libssl-dev libz-dev mingw-w64
 RUN rustup target add x86_64-apple-darwin
+RUN rustup target add x86_64-pc-windows-gnu
 RUN git clone https://github.com/tpoechtrager/osxcross .
 RUN wget -nc https://s3.dockerproject.org/darwin/v2/MacOSX10.10.sdk.tar.xz
 RUN mv MacOSX10.10.sdk.tar.xz tarballs/
